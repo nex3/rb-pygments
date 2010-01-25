@@ -1,26 +1,28 @@
-# yard-pygments
+# rb-pygments
 
-This is a plugin for the [YARD](http://yardoc.org) documentation system
-that adds syntax highlighting for a wide variety of languages
-using the [Pygments](http://pygments.org) syntax highlighter.
+This is a wrapper for the [Pygments](http://pygments.org) syntax highlighter.
+It can be used to highlight a wide variety of languages in a wide variety of formats.
 
 ## Usage
 
-Once the gem is installed, YARD should automatically load it.
-Then any block of code beginning with `!!!lang` that YARD doesn't recognize
-will be highlighted using Pygments if possible.
-Unless another highlighter is installed, in which case it might take precedence.
+All functionality is available through the {Pygments} module.
+Highlighting is done via the {Pygments.highlight highlight} method,
+like so (reformatted for readability:
 
-By default, YARD itself only recognizes Ruby.
-The full list of languages recognized by Pygments is available [here](http://pygments.org/docs/lexers/).
-The names that will be recognized for these languages are listed under "short names".
+    Pygments.highlight("Some.ruby(:code)", :ruby, :html, :nowrap => true)
+      #=> <span class="no">Some</span>
+          <span class="o">.</span>
+          <span class="n">ruby</span>
+          <span class="p">(</span>
+          <span class="ss">:code</span>
+          <span class="p">)</span>
+
+Stylesheets and such can be retrieved via the {Pygments.style style} method.
 
 ## Requirements
 
-yard-pygments requires, unsurprisingly, YARD and Pygments.
-YARD will be installed along with the gem,
-but since Pygments is written in Python,
-it needs to be installed manually.
+yard-pygments requires that Pygments be installed.
+Since Pygments is written in Python, it needs to be installed manually.
 If you've got [`easy_install`](http://peak.telecommunity.com/DevCenter/EasyInstall), you can do
 
     !!!sh
