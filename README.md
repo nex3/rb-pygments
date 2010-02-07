@@ -21,7 +21,7 @@ Stylesheets and such can be retrieved via the {Pygments.style style} method.
 
 ## Requirements
 
-yard-pygments requires that Pygments be installed.
+rb-pygments requires that Pygments be installed.
 Since Pygments is written in Python, it needs to be installed manually.
 If you've got [`easy_install`](http://peak.telecommunity.com/DevCenter/EasyInstall), you can do
 
