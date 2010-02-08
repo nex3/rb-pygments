@@ -3,6 +3,8 @@
 This is a wrapper for the [Pygments](http://pygments.org) syntax highlighter.
 It can be used to highlight a wide variety of languages in a wide variety of formats.
 
+[API documentation is available on rdoc.info](http://rdoc.info/projects/nex3/rb-pygments).
+
 ## Usage
 
 All functionality is available through the {Pygments} module.
